@@ -3,7 +3,7 @@ var cheerio = require('cheerio');
 var superagent = require('superagent');
 
 var app = express();
-app.listen(5000);
+app.listen(process.env.PORT || 5000);
 
 app.get('/', function (req, res, next) {
 	superagent.get('https://www.cnodejs.org')
